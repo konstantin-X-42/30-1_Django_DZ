@@ -118,26 +118,26 @@
 ├── poetry.lock                     # 30.1 Зафиксированные версии установленных библиотек Poetry
 └── README.md                       # 30.1 Документация проекта и инструкция по запуску для проверки ДЗ
 ```
-# 30.1 инициализируем новый проект Poetry в текущей директории (если pyproject.toml еще не создан)
+### 30.1 инициализируем новый проект Poetry в текущей директории (если pyproject.toml еще не создан)
 poetry init -n
 
-# 30.1 устанавливаем Django, Django REST Framework и библиотеку Pillow через Poetry
+### 30.1 устанавливаем Django, Django REST Framework и библиотеку Pillow через Poetry
 poetry add django djangorestframework pillow
 
-# 30.1 создаем новый Django-проект с именем config внутри виртуального окружения Poetry
+### 30.1 создаем новый Django-проект с именем config внутри виртуального окружения Poetry
 poetry run django-admin startproject config .
 
-# 30.1 создаем приложение users для модели кастомного пользователя
+### 30.1 создаем приложение users для модели кастомного пользователя
 poetry run python manage.py startapp users
 
-# 30.1 создаем приложение materials для моделей курса и урока
+### 30.1 создаем приложение materials для моделей курса и урока
 poetry run python manage.py startapp materials
 
-# 30.1 запускаем тестовый сервер Django через Poetry для проверки работоспособности проекта
+### 30.1 запускаем тестовый сервер Django через Poetry для проверки работоспособности проекта
 poetry run python manage.py runserver
 
-# 30.1 генерируем файлы миграций для созданных моделей в приложениях users и materials
+### 30.1 генерируем файлы миграций для созданных моделей в приложениях users и materials
 poetry run python manage.py makemigrations
 
-# 30.1 применяем все миграции и создаем таблицы в базе данных
+### 30.1 применяем все миграции и создаем таблицы в базе данных
 poetry run python manage.py migrate
