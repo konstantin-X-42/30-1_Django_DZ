@@ -16,6 +16,12 @@ poetry run python manage.py startapp materials
 # 30.1 запускаем тестовый сервер Django через Poetry для проверки работоспособности проекта
 poetry run python manage.py runserver
 
+# 30.1 генерируем файлы миграций для созданных моделей в приложениях users и materials
+poetry run python manage.py makemigrations
+
+# 30.1 применяем все миграции и создаем таблицы в базе данных
+poetry run python manage.py migrate
+
 
 
 
