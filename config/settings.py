@@ -19,8 +19,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 30.1 подключаем библиотеку Django REST Framework согласно документации
     'rest_framework',
+
+    # 30.1 регистрируем созданные приложения проекта
     'users',
+    'materials',
 
 ]
 
@@ -103,5 +107,12 @@ MAILERS = {
     },
 }
 
-
+# 30.1 переопределяем стандартную модель пользователя Django на нашу кастомную модель из приложения users
 AUTH_USER_MODEL = 'users.User'
+
+
+# 30.1 указываем URL-префикс для обращения к загруженным медиафайлам
+MEDIA_URL = '/media/'
+
+# 30.1 определяем путь к папке на диске, куда будут сохраняться загруженные изображения
+MEDIA_ROOT = BASE_DIR / 'media'
