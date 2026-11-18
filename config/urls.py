@@ -5,8 +5,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # 30.1 подключаем все API-маршруты приложения materials в корневой роутинг проекта
+    # 30.1 подключаем маршруты приложения materials
     path('', include('materials.urls', namespace='materials')),
+    # 30.1 подключаем маршруты приложения users для редактирования профиля
+    path('', include('users.urls', namespace='users')),
 ]
 
 # 30.1 добавляем маршруты для раздачи загруженных медиафайлов в режиме отладки
